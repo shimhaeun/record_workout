@@ -86,7 +86,8 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 24px 0;
-  background: rgba(103, 176, 209, 0.8);
+  /* background: rgba(103, 176, 209, 0.8); */
+  background: #A8DADC;
 }
 
 #header.header-transparent {
@@ -305,7 +306,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #67b0d1;
+  color: #E63946;
 }
 
 .navbar-mobile .getstarted,
@@ -379,7 +380,7 @@ h6 {
   line-height: 56px;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: -1px 0 2px #2f4d5a;
+  text-shadow: -1px 0 2px #1D3557;
 }
 
 #hero h2 {
@@ -388,7 +389,7 @@ h6 {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: -1px 0 2px #2f4d5a;
+  text-shadow: -1px 0 2px #1D3557;
 }
 
 #hero .btn-get-started {
@@ -523,7 +524,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../img/about-bg.jpg") center center no-repeat;
+  background: url("../img/design-space-paper-textured-background.jpeg") center center no-repeat;
   background-size: cover;
   padding: 60px 0;
   position: relative;
@@ -562,10 +563,10 @@ section {
 
 .about .content .about-btn {
   display: inline-block;
-  background: #67b0d1;
+  background: #E63946;
   padding: 6px 44px 8px 30px;
   color: #fff;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: 0.3s;
   position: relative;
 }
@@ -578,7 +579,7 @@ section {
 }
 
 .about .content .about-btn:hover {
-  background: #7bbad7;
+  background: #A8DADC;
 }
 
 .about .icon-boxes .icon-box {
@@ -587,7 +588,7 @@ section {
 
 .about .icon-boxes .icon-box i {
   font-size: 40px;
-  color: #67b0d1;
+  color: #A8DADC;
   margin-bottom: 10px;
 }
 
@@ -641,7 +642,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #67b0d1;
+  background: #A8DADC;
   top: 0;
   border-radius: 0px;
 }
@@ -653,7 +654,7 @@ section {
 .services .icon i {
   font-size: 48px;
   line-height: 1;
-  color: #67b0d1;
+  color: #A8DADC;
   transition: all 0.3s ease-in-out;
 }
 
@@ -697,7 +698,7 @@ section {
 .counts .count-box i {
   display: block;
   font-size: 44px;
-  color: #67b0d1;
+  color: #A8DADC;
   float: left;
   line-height: 0;
 }
@@ -730,7 +731,7 @@ section {
 }
 
 .counts .count-box a:hover {
-  color: #6e9fb4;
+  color: #A8DADC;
 }
 
 /*--------------------------------------------------------------
