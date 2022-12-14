@@ -94,29 +94,21 @@
 
              
 
-          <div class="col-lg-4">
+          <div class="col-lg-8 ">
             <div class="portfolio-info">
               <h3 class="text-center">오늘의 운동을 추가하세요<div class="text-center"></div></h3>
-              <select class="form-select text-center">
-                <option value="1">하체</option>
-                <option value="2">등</option>
-                <option value="3">어깨</option>
-                <option value="4">가슴</option>
-                <option value="5">팔</option>
+              <select onchange="categoryChange(this)" class="form-select text-center">
+                <option>운동 부위를 선택해주세요</option>
+                <option value="leg">하체</option>
+                <option value="back">등</option>
+                <option value="shoulder">어깨</option>
+                <option value="chest">가슴</option>
+                <option value="arm">팔</option>
                 </select> 
-              <select class="form-select text-center" multiple aria-label="multiple select">
-                <option value="1">운동 종류</option>
-                <option value="2">하체</option>
-                <option value="3">운동 종류</option>
-                <option value="4">운동 종류</option>
-                <option value="5">운동 종류</option>
-              </select>
-              <select class="selectpicker">
-                <option>Mustard</option>
-                <option>Ketchup</option>
-                <option>Relish</option>
-              </select>
-           
+                
+                <select id="workout" class="form-select text-center">
+                <option>운동 종류를 선택해주세요</option>
+                </select>
             </div>
             <div class="portfolio-description">
               <h2>This is an example of portfolio detail</h2>
@@ -139,60 +131,6 @@
       <div class="container">
         <div class="row">
 
-          <!-- <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>Squadfree</h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div> -->
-
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div> -->
 
     <div class="container">
       <div class="copyright">
@@ -224,7 +162,31 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function categoryChange(e) {
+	var workout_leg = ["스쿼트", "런지", "레그프레스", "레그익스텐션", "레그컬", "힙어덕션", "이너싸이","핵스쿼트머신", "브이스쿼트머신"];
+	var workout_back = ["데드리프트", "티바로우", "바벨로우", "덤벨로우", "원암덤벨로우", "랫풀다운", "시티드로우"];
+	var workout_chest = ["벤치프레스","인클라인벤치프레스", "덤벨 체스트프레스", "바벨 체스트프레스", "펙덱플라이", "딥스", "푸쉬업", "플라이"];
+	var workout_shoulder = ["사이드레터럴레이즈", "덤벨숄더프레스", "바벨숄더프레스", "비하인드넥프레스", "프론트레이즈", ];
+	var workout_arm = ["덤벨컬", "바벨컬", ""];
+	var target = document.getElementById("workout");
 
+	if(e.value == "leg") var d = workout_leg;
+	else if(e.value == "back") var d = workout_back;
+	else if(e.value == "chest") var d = workout_chest;
+	else if(e.value == "shoulder") var d = workout_shoulder;
+	else if(e.value == "arm") var d = workout_arm;
+
+	target.options.length = 0;
+
+	for (x in d) {
+		var opt = document.createElement("option");
+		opt.value = d[x];
+		opt.innerHTML = d[x];
+		target.appendChild(opt);
+	}	
+}
+  </script>
 </body>
 
 </html>
