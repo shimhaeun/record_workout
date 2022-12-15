@@ -87,14 +87,14 @@
     </section><!-- Breadcrumbs Section -->
 
     <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
+    <section id="workout-details" class="workout-details">
       <div class="container">
 
         <div class="row gy-4">
 
              
 
-          <div class="col-lg-8 ">
+          <div class="col-lg-6" style="float: none; margin: 0 auto;">
             <div class="portfolio-info">
               <h3 class="text-center">오늘의 운동을 추가하세요<div class="text-center"></div></h3>
               <select onchange="categoryChange(this)" class="form-select text-center">
@@ -109,11 +109,26 @@
                 <select id="workout" class="form-select text-center">
                 <option>운동 종류를 선택해주세요</option>
                 </select>
+           
+              <select class="form-select text-center">
+                <option>무게를 선택해주세요 (kg)</option>
+                <option>1</option>
+                <option>2</option>
+                </option>
+              </select>
+              <tr style="text-align:center;">
+                <p>수량</p>
+                <p class="bseq_ea">0</p>
+                <p> 
+                    <button type ="button" onclick="fnCalCount('p',this);">+</button>
+                    <input type="text" name="pop_out" value="0" readonly="readonly" style="text-align:center;"/>
+                    <button type="button" onclick="fnCalCount('m', this);">-</button>
+                </p>
+            </tr> 
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>--</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
               </p>
             </div>
           </div>
@@ -163,12 +178,12 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    function categoryChange(e) {
+  function categoryChange(e) {
 	var workout_leg = ["스쿼트", "런지", "레그프레스", "레그익스텐션", "레그컬", "힙어덕션", "이너싸이","핵스쿼트머신", "브이스쿼트머신"];
 	var workout_back = ["데드리프트", "티바로우", "바벨로우", "덤벨로우", "원암덤벨로우", "랫풀다운", "시티드로우"];
 	var workout_chest = ["벤치프레스","인클라인벤치프레스", "덤벨 체스트프레스", "바벨 체스트프레스", "펙덱플라이", "딥스", "푸쉬업", "플라이"];
 	var workout_shoulder = ["사이드레터럴레이즈", "덤벨숄더프레스", "바벨숄더프레스", "비하인드넥프레스", "프론트레이즈", ];
-	var workout_arm = ["덤벨컬", "바벨컬", ""];
+	var workout_arm = ["덤벨컬", "바벨컬", "케이블푸쉬다운", "오버헤드 트라이셉스익스텐션", "덤벨 킥백", "딥스"];
 	var target = document.getElementById("workout");
 
 	if(e.value == "leg") var d = workout_leg;
@@ -185,6 +200,18 @@
 		opt.innerHTML = d[x];
 		target.appendChild(opt);
 	}	
+}
+function fnCalCount(type, ths){
+    var $input = $(ths).parents("td").find("input[name='pop_out']");
+    var tCount = Number($input.val());
+    var tEqCount = Number($(ths).parents("tr").find("td.bseq_ea").html());
+    
+    if(type=='p'){
+        if(tCount < tEqCount) $input.val(Number(tCount)+1);
+        
+    }else{
+        if(tCount > 0) $input.val(Number(tCount)-1);    
+        }
 }
   </script>
 </body>
