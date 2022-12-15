@@ -97,7 +97,7 @@
           <div class="col-lg-6" style="float: none; margin: 0 auto;">
             <div class="portfolio-info">
               <h3 class="text-center">오늘의 운동을 추가하세요<div class="text-center"></div></h3>
-              <select onchange="categoryChange(this)" class="form-select text-center">
+              <select onchange="categoryChange(this);wkotPart(this)" class="form-select text-center">
                 <option>운동 부위를 선택해주세요</option>
                 <option value="leg">하체</option>
                 <option value="back">등</option>
@@ -106,7 +106,7 @@
                 <option value="arm">팔</option>
                 </select> 
                 
-                <select id="workout" class="form-select text-center">
+                <select id="workout" onchange="wkotType(this)" class="form-select text-center">
                 <option>운동 종류를 선택해주세요</option>
                 </select>
            
@@ -116,20 +116,12 @@
                 <option>2</option>
                 </option>
               </select>
-              <tr style="text-align:center;">
-                <p>수량</p>
-                <p class="bseq_ea">0</p>
-                <p> 
-                    <button type ="button" onclick="fnCalCount('p',this);">+</button>
-                    <input type="text" name="pop_out" value="0" readonly="readonly" style="text-align:center;"/>
-                    <button type="button" onclick="fnCalCount('m', this);">-</button>
-                </p>
-            </tr> 
+              
             </div>
             <div class="portfolio-description">
-              <h2>--</h2>
-              <p>
-              </p>
+              <h2></h2>
+              <p class="wkotPart"></p>
+              <p class="wkotType"></p>
             </div>
           </div>
 
@@ -212,6 +204,18 @@ function fnCalCount(type, ths){
     }else{
         if(tCount > 0) $input.val(Number(tCount)-1);    
         }
+}
+const wkotPart = (target) => {
+  const value = target.value;
+  const text =  target.options[target.selectedIndex].text;
+  
+  document.querySelector(`.wkotPart`).innerHTML = `운동 부위: ${text}(${value})`;
+}
+const wkotType = (target) => {
+  const value = target.value;
+  const text =  target.options[target.selectedIndex].text;
+  
+  document.querySelector(`.wkotType`).innerHTML = `운동 종류: ${text}`;
 }
   </script>
 </body>
