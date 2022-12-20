@@ -476,7 +476,7 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 15px 0;
+  padding: 5% 0;
   background-color: #f8fbfd;
   min-height: 40px;
 }
@@ -876,20 +876,20 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.workout-details {
   padding-top: 40px;
 }
 
-.portfolio-details .portfolio-details-slider img {
+.workout-details .workout-details-slider img {
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.workout-details .workout-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.workout-details .workout-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -897,16 +897,16 @@ section {
   border: 1px solid #67b0d1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.workout-details .workout-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #67b0d1;
 }
 
-.portfolio-details .portfolio-info {
+.workout-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(47, 77, 90, 0.08);
 }
 
-.portfolio-details .portfolio-info h3 {
+.workout-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -914,27 +914,27 @@ section {
   border-bottom: 1px solid #eee;
 }
 
-.portfolio-details .portfolio-info ul {
+.workout-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.workout-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
+.workout-details .portfolio-description {
   padding-top: 30px;
 }
 
-.portfolio-details .portfolio-description h2 {
+.workout-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.workout-details .portfolio-description p {
   padding: 0;
 }
 
@@ -1258,7 +1258,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #263f49;
-  padding: 0 0 30px 0;
+  padding: 0 0 10% 0;
   color: #fff;
   font-size: 14px;
 }

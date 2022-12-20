@@ -110,18 +110,18 @@
                 <option>운동 종류를 선택해주세요</option>
                 </select>
            
-              <select class="form-select text-center">
-                <option>무게를 선택해주세요 (kg)</option>
-                <option>1</option>
-                <option>2</option>
-                </option>
+                <div class="col-auto">
+                <input class="form-control" placeholder="무게를 입력해주세요 (kg)"type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');"/> 
+                <!-- 숫자만 입력 가능하도록 유효성 검사 -->
+                <p class="wkotPart"></p>
+                <p class="wkotType"></p>
+                <p class="wkotWeight"></p>
+                <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto align-items-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
+                </div>
               </select>
               
             </div>
             <div class="portfolio-description">
-              <h2></h2>
-              <p class="wkotPart"></p>
-              <p class="wkotType"></p>
             </div>
           </div>
 
@@ -209,13 +209,19 @@ const wkotPart = (target) => {
   const value = target.value;
   const text =  target.options[target.selectedIndex].text;
   
-  document.querySelector(`.wkotPart`).innerHTML = `운동 부위: ${text}(${value})`;
+  document.querySelector(`.wkotPart`).innerHTML = `운동 부위 : ${text}(${value})`;
 }
 const wkotType = (target) => {
   const value = target.value;
   const text =  target.options[target.selectedIndex].text;
   
-  document.querySelector(`.wkotType`).innerHTML = `운동 종류: ${text}`;
+  document.querySelector(`.wkotType`).innerHTML = `운동 종류 : ${text}`;
+}
+const wkotWeight = (target) => {
+  const value = target.value;
+  const text =  target.options[target.selectedIndex].text;
+  
+  document.querySelector(`.wkotWeight`).innerHTML = `무게 : ${text}`;
 }
   </script>
 </body>
