@@ -111,13 +111,14 @@
                 </select>
            
                 <div class="col-auto">
-                <input class="form-control" placeholder="무게를 입력해주세요 (kg)"type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');"/> 
+                <input  id="input_weight" class="form-control" placeholder="무게를 입력해주세요 (kg)"type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,''); printWeight()"/> 
                 <!-- 숫자만 입력 가능하도록 유효성 검사 -->
                 <p class="wkotPart"></p>
                 <p class="wkotType"></p>
-                <p class="wkotWeight"></p>
+                <div id="weight"></div>
                 <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto align-items-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
-                </div>
+                <p class="wkotTotal"></p>
+              </div>
               </select>
               
             </div>
@@ -217,13 +218,23 @@ const wkotType = (target) => {
   
   document.querySelector(`.wkotType`).innerHTML = `운동 종류 : ${text}`;
 }
-const wkotWeight = (target) => {
-  const value = target.value;
-  const text =  target.options[target.selectedIndex].text;
+// const wkotWeight = (target) => {
+//   const value = target.value;
+//   const text =  target.options[target.].text;
   
-  document.querySelector(`.wkotWeight`).innerHTML = `무게 : ${text}`;
+//   document.querySelector(`.wkotWeight`).innerHTML = `무게 : ${text}`;
+// }
+
+function printWeight() {
+  const input_weight = document.getElementById('input_weight').value;
+  document.getElementById("weight").innerText = input_weight;
 }
-  </script>
+
+function printName()  {
+  const name = document.getElementById('name').value;
+  document.getElementById("result").innerText = name;
+}
+</script>
 </body>
 
 </html>
