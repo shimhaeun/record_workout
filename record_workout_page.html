@@ -92,8 +92,6 @@
 
         <div class="row gy-4">
 
-             
-
           <div class="col-lg-6" style="float: none; margin: 0 auto;">
             <div class="portfolio-info">
               <h3 class="text-center">오늘의 운동을 추가하세요<div class="text-center"></div></h3>
@@ -116,7 +114,7 @@
                 <p class="wkotPart"></p>
                 <p class="wkotType"></p>
                 <div id="weight"></div>
-                <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto align-items-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
+                <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto text-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
                 <p class="wkotTotal"></p>
               </div>
               </select>
@@ -227,13 +225,9 @@ const wkotType = (target) => {
 
 function printWeight() {
   const input_weight = document.getElementById('input_weight').value;
-  document.getElementById("weight").innerText = input_weight;
+  document.getElementById("weight").innerText = input_weight +"kg";
 }
 
-function printName()  {
-  const name = document.getElementById('name').value;
-  document.getElementById("result").innerText = name;
-}
 </script>
 </body>
 
