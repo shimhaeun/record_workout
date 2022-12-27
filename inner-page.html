@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Squadfree Bootstrap Template</title>
+  <title>Workout Information</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/icons8-플렉스-이두근-color-96.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -23,7 +23,6 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -33,7 +32,22 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .embed-container {
+     position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; } 
+    .embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; }
+    </style>
 </head>
+
 
 <body>
 
@@ -42,36 +56,25 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1 class="text-light"><a href="home.html"><span>Squadfree</span></a></h1>
+        <h1 class="text-light"><a href="home.html"><span>Record Your Workout!</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="home.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
+          <li><a class="nav-link scrollto " href="#hero">HOME</a></li>
+          <li><a class="nav-link scrollto" href="#about">CALENDER</a></li>
+          <li><a class="nav-link scrollto" href="#library">library</a></li>
+          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Workout Information</a></li>
+          <li><a class="nav-link scrollto" href="#search">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn text-light" style="background-color:#1D3557" type="submit">검색</button>
+            </form>
+          </a></li>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -112,56 +115,19 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>Squadfree</h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
+          
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
+         
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
+          
 
         </div>
       </div>
@@ -169,15 +135,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+        <strong><span>Record Your Workout</span></strong>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      
     </div>
   </footer><!-- End Footer -->
 
