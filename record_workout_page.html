@@ -37,17 +37,16 @@
 
       <div class="logo">
         <h1 class="text-light"><a href="home.html"><span>Record Your Workout!</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="home.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">HOME</a></li>
-          <li><a class="nav-link scrollto" href="#about">CALENDER</a></li>
-          <li><a class="nav-link scrollto" href="#library">library</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Workout Information</a></li>
-          <li><a class="nav-link scrollto" href="#search">
+          <li><a class="nav-link scrollto " href="/home.html">HOME</a></li>
+          <li><a class="nav-link scrollto" href="/home.html">CALENDER</a></li>
+          <li><a class="nav-link scrollto" href="/home.html">library</a></li>
+          <li><a class="nav-link scrollto" href="/workout-details.html">Workout Information</a></li>
+          <li><a class="nav-link scrollto" href="#">
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn text-light" style="background-color:#1D3557" type="submit">검색</button>
@@ -108,8 +107,14 @@
                 <div id="weight"></div>
                 <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto text-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
                 <p class="wkotTotal">
+                  <p id="example"></p>
 
-                  
+                  <script>
+                  const text = '{"part":"woktPart", "type":22, "weight":"New Delhi", "weight":"20"}'
+                  const object = JSON.parse(text);
+                  document.getElementById("example").innerHTML = object.part + ", " + object.type + "," + object.weight ;
+                  </script>
+
                 </p>
               </div>
               </select>
@@ -203,17 +208,20 @@ const wkotType = (target) => {
   
   document.querySelector(`.wkotType`).innerHTML = `운동 종류 : ${text}`;
 }
-// const wkotWeight = (target) => {
-//   const value = target.value;
-//   const text =  target.options[target.].text;
-  
-//   document.querySelector(`.wkotWeight`).innerHTML = `무게 : ${text}`;
-// }
 
 function printWeight() {
   const input_weight = document.getElementById('input_weight').value;
   document.getElementById("weight").innerText = "무게 : " + input_weight +"kg";
 }
+
+  	// 배열 선언
+    const wkotList = ['.wkotPart', '.,wkotType', 'input_weight' ];
+// 배열 출력 (for 문)
+for(let wkotList = 0; i < arr.length; i++) {
+  document.write(arr[i] + '<br>');
+}
+
+document.getElementById(".wkotPart + .wkotType + weight").innerHTML = `${value}${text}${input_weight}`;
 
 </script>
 </body>
