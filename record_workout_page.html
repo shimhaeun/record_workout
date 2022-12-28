@@ -27,12 +27,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Squadfree - v4.9.1
-  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -52,7 +46,6 @@
           <li><a class="nav-link scrollto " href="#hero">HOME</a></li>
           <li><a class="nav-link scrollto" href="#about">CALENDER</a></li>
           <li><a class="nav-link scrollto" href="#library">library</a></li>
-          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Workout Information</a></li>
           <li><a class="nav-link scrollto" href="#search">
             <form class="d-flex" role="search">
@@ -78,8 +71,7 @@
           <h2 class="text-center">Today's Workout</h2>
           <ol>
             <li><a href="home.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li>Portfolio Details</li>
+            <li>Today's Workout</li>
           </ol>
         </div>
 
@@ -115,7 +107,10 @@
                 <p class="wkotType"></p>
                 <div id="weight"></div>
                 <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto text-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
-                <p class="wkotTotal"></p>
+                <p class="wkotTotal">
+
+                  
+                </p>
               </div>
               </select>
               
@@ -143,14 +138,6 @@
         Record Your Workout !
         <!-- &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved -->
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
-      
-        </div>
     </div> 
   </footer>
   <!-- End Footer -->
@@ -225,7 +212,7 @@ const wkotType = (target) => {
 
 function printWeight() {
   const input_weight = document.getElementById('input_weight').value;
-  document.getElementById("weight").innerText = input_weight +"kg";
+  document.getElementById("weight").innerText = "무게 : " + input_weight +"kg";
 }
 
 </script>
