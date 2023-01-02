@@ -100,20 +100,20 @@
                 </select>
            
                 <div class="col-auto">
-                <input  id="input_weight" class="form-control" placeholder="무게를 입력해주세요 (kg)"type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,''); printWeight()"/> 
+                <input style="text-align: center;" id="input_weight" class="form-control" placeholder="무게를 입력해주세요 (kg)"type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,''); printWeight()"/> 
                 <!-- 숫자만 입력 가능하도록 유효성 검사 -->
-                <p class="wkotPart"></p>
-                <p class="wkotType"></p>
-                <div id="weight"></div>
-                <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto text-center" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px;">운동 추가</button>
+                <p class="wkotPart" style="text-align: center;"></p>
+                <p class="wkotType" style="text-align: center;"></p>
+                <div id="weight" style="text-align: center;"></div>
+                <button onchange="wkotWeight(this)" type="submit" class="btn mb-3 .mx-auto displaycenter" id="addbtn" style="background-color: #E63946; color:white; margin-top: 10px; display: flex; align-items: center;">운동 추가</button>
                 <p class="wkotTotal">
                   <p id="example"></p>
 
-                  <script>
-                  const text = '{"part":"woktPart", "type":22, "weight":"New Delhi", "weight":"20"}'
+                  <!-- <script>
+                  const text = '{"part":"wkotPart", "type":22, "weight":"New Delhi", "weight":"20"}'
                   const object = JSON.parse(text);
                   document.getElementById("example").innerHTML = object.part + ", " + object.type + "," + object.weight ;
-                  </script>
+                  </script> -->
 
                 </p>
               </div>
